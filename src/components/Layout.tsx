@@ -1,5 +1,7 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
+import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "../styles/theme";
 
 type Props = {
   children?: ReactNode;
@@ -7,16 +9,23 @@ type Props = {
 };
 
 const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div>
+  <html lang="en">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      ></link>
     </Head>
     <header></header>
-    {children}
+    <ChakraProvider theme={theme}>
+      <body>{children}</body>
+    </ChakraProvider>
     <footer></footer>
-  </div>
+  </html>
 );
 
 export default Layout;
