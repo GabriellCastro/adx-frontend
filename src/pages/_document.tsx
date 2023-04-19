@@ -7,7 +7,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
-// import theme from "../theme";
+import theme from "../theme";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -24,7 +24,7 @@ class MyDocument extends Document {
         <Head></Head>
         <title>Adx Full</title>
         <body>
-          <ColorModeScript />
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
