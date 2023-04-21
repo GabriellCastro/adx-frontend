@@ -17,6 +17,10 @@ export const theme = extendTheme({
       "600": "#3e13bf",
       "500": "#4d4dff",
     },
+    purple: {
+      "800": "#4D4DFF",
+      "700": "#9B51E0",
+    },
   },
   fonts: {
     heading: `'Roboto', sans-serif`,
@@ -25,7 +29,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "gray.100",
+        bg: "gray.800",
         color: "gray.900",
       },
     },

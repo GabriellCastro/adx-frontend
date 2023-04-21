@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <html lang="en">
+  <div>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -18,14 +18,14 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet"
-      ></link>
+      />
     </Head>
     <header></header>
     <ChakraProvider theme={theme}>
-      <body>{children}</body>
+      <>{children}</>
     </ChakraProvider>
     <footer></footer>
-  </html>
+  </div>
 );
 
 export default Layout;
